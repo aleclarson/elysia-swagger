@@ -200,9 +200,9 @@ export const registerSchemaPath = ({
                             description: rest.description as any,
                             content: mapTypesResponse(
                                 contentTypes,
-                                rest.type === 'object' || rest.type === 'array'
+                                type === 'object' || type === 'array'
                                     ? ({
-                                          type: rest.type,
+                                          type,
                                           properties,
                                           patternProperties,
                                           items: value.items,
